@@ -35,6 +35,7 @@
     border-radius:12px; padding:14px; cursor:pointer; margin-top:6px; }
   button:hover{ filter:brightness(1.05); }
   .fine{ color:var(--muted); font-size:13px; margin-top:8px; }
+  .hint{ color:var(--muted); font-size:13px; margin:6px 0 0; }
   .back{ display:inline-block; margin-top:28px; color:var(--muted); font-size:14px; }
 </style>
 </head>
@@ -65,8 +66,9 @@
       <input id="name" name="name" type="text" placeholder="Your name" required>
     </div>
     <div>
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" placeholder="you@example.com" required>
+      <label for="email">Apple Account email</label>
+      <input id="email" name="email" type="email" placeholder="you@icloud.com" required>
+      <p class="hint">Use the email linked to your Apple Account (App Store) — that’s where your TestFlight invite will be sent.</p>
     </div>
     <div>
       <label for="device">iPhone &amp; iOS version <span style="color:var(--muted);font-weight:400">(optional)</span></label>
