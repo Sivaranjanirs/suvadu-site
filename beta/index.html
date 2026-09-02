@@ -51,7 +51,8 @@
   <p class="sub">Suvadu is currently in private beta on iPhone. Leave your details and we’ll reach out with a TestFlight invite as spots open up.</p>
 
   <form action="https://formsubmit.co/contact_suvadu@builtandthen.com" method="POST">
-    <!-- FormSubmit config (email hidden behind the hashed alias above) -->
+    <!-- FormSubmit config. Posts to the public Suvadu alias, which Porkbun
+         forwards to the private inbox. -->
     <input type="hidden" name="_subject" value="New Suvadu beta signup">
     <input type="hidden" name="_template" value="table">
     <input type="hidden" name="_captcha" value="false">
