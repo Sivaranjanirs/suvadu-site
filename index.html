@@ -46,10 +46,22 @@
   .cta.secondary{ background:transparent; color:var(--accent); border:1px solid var(--line); margin-left:12px; }
   .note{ color:var(--muted); font-size:13px; margin-top:14px; }
 
-  /* Phone */
-  .phone{ justify-self:center; width:270px; aspect-ratio:1206/2622; border-radius:44px;
-    background:#000; padding:10px; box-shadow:0 30px 70px rgba(70,60,180,.28); }
-  .phone img{ width:100%; height:100%; object-fit:cover; border-radius:34px; display:block; }
+  /* Memory-cards visual */
+  .memcards{ position:relative; justify-self:center; width:100%; max-width:420px; height:430px; }
+  .memcards .glow{ position:absolute; inset:12% 10%; border-radius:50%;
+    background:radial-gradient(closest-side, color-mix(in srgb, var(--accent) 24%, transparent), transparent);
+    filter:blur(12px); z-index:0; }
+  .memcards .brainwm{ position:absolute; inset:0; display:grid; place-items:center; z-index:0; }
+  .memcards .brainwm img{ width:64%; border-radius:28px; opacity:.10; }
+  .card3d{ position:absolute; z-index:1; background:var(--card); border:1px solid var(--line);
+    border-radius:16px; padding:13px 15px; box-shadow:0 18px 44px rgba(40,30,120,.16); width:250px; }
+  .card3d .meta{ display:flex; align-items:center; gap:8px; color:var(--muted); font-size:12px; margin-bottom:5px; }
+  .card3d .dot{ width:8px; height:8px; border-radius:50%; background:var(--accent); flex:0 0 auto; }
+  .card3d p{ margin:0; font-size:15px; line-height:1.4; }
+  .c1{ top:2%;  left:0;   transform:rotate(-5deg); }
+  .c2{ top:28%; right:0;  transform:rotate(4deg); }
+  .c3{ top:53%; left:4%;  transform:rotate(-3deg); }
+  .c4{ top:78%; right:5%; transform:rotate(5deg); }
 
   /* Sections */
   section{ padding:56px 0; }
@@ -85,6 +97,7 @@
     .steps,.features{ grid-template-columns:1fr; }
     nav .links{ display:none; }
     .cta.secondary{ margin-left:0; margin-top:10px; }
+    .memcards{ height:400px; max-width:360px; margin:18px auto 0; }
   }
 </style>
 </head>
@@ -112,8 +125,13 @@
       <a class="cta secondary" href="#how">See how it works</a>
       <div class="note">Now in private beta · iPhone · iOS 26 · Private &amp; on-device</div>
     </div>
-    <div class="phone">
-      <img src="assets/screenshot.png" alt="Suvadu app on iPhone showing the record screen">
+    <div class="memcards" aria-hidden="true">
+      <div class="glow"></div>
+      <div class="brainwm"><img src="assets/icon.png" alt=""></div>
+      <div class="card3d c1"><div class="meta"><span class="dot"></span>Today</div><p>Parked at SFO — Garage G, level 4, blue section.</p></div>
+      <div class="card3d c2"><div class="meta"><span class="dot"></span>Yesterday</div><p>Garage keypad uses a CR2032 battery.</p></div>
+      <div class="card3d c3"><div class="meta"><span class="dot"></span>3 days ago</div><p>Air filter size is 16 × 25 × 1.</p></div>
+      <div class="card3d c4"><div class="meta"><span class="dot"></span>Last week</div><p>Spare key is in the top office drawer.</p></div>
     </div>
   </header>
 
